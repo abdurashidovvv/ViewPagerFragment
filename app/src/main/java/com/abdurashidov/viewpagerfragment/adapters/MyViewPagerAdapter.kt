@@ -13,4 +13,8 @@ class MyViewPagerAdapter(fm:FragmentManager, val list:ArrayList<User>):FragmentP
         return ImageFragment.newInstance(list[position].name, list[position].image.toString())
     }
 
+    override fun getPageTitle(position: Int): CharSequence? {
+        return list[position].name
+    }
+
 }
